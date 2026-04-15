@@ -2,7 +2,9 @@
 **Algorithm name:** Merge Sort
 
 **Images:**
+
 <img width="539" height="670" alt="Screenshot 2026-04-15 143842" src="https://github.com/user-attachments/assets/0939cfca-84d7-4c30-a315-4ed04ff8aaf6" />
+
 <img width="515" height="440" alt="Screenshot 2026-04-15 144026" src="https://github.com/user-attachments/assets/d941ce43-2e4c-4a7f-953d-36026296c77b" />
 
 **Problem Breakdown & Computational Thinking**
