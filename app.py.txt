@@ -1,0 +1,60 @@
+import gradio as gr
+
+songs = songs = [
+    {"title": "Solo", "artist": "Clean Bandit & Demi Lovato", "energy": 85, "duration": 222},
+    {"title": "Outside", "artist": "Calvin Harris & Ellie Goulding", "energy": 90, "duration": 227},
+    {"title": "We Are The People", "artist": "Empire of the Sun", "energy": 70, "duration": 268},
+    {"title": "Blinding Lights", "artist": "The Weeknd", "energy": 95, "duration": 200},
+    {"title": "Levitating", "artist": "Dua Lipa", "energy": 88, "duration": 203},
+    {"title": "Titanium", "artist": "David Guetta ft. Sia", "energy": 92, "duration": 245},
+    {"title": "Stay", "artist": "The Kid LAROI & Justin Bieber", "energy": 75, "duration": 141},
+    {"title": "As It Was", "artist": "Harry Styles", "energy": 65, "duration": 167}
+]
+
+def merge(left, right, key):
+    result = []
+    i = j = 0
+
+    while i < len(left) and j < len(right):
+        if left[i][key] <= right[j][key]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+
+    result.extend(left[i:])
+    result.extend(right[j:])
+
+    return result
+
+def merge_sort(arr, key):
+    if len(arr) <= 1:
+        return arr
+
+    mid = len(arr) // 2
+
+    left = merge_sort(arr[:mid], key)
+    right = merge_sort(arr[mid:], key)
+
+    return merge(left, right, key)
+
+def sort_playlist(sort_key):
+
+    sorted_songs = merge_sort(songs, sort_key)
+
+    output = ""
+
+    for s in sorted_songs:
+        output += f"{s['title']} - {s['artist']} | Energy: {s['energy']} | Duration: {s['duration']}\n"
+
+    return output
+
+interface = gr.Interface(
+    fn=sort_playlist,
+    inputs=gr.Dropdown(["energy", "duration"], label="Sort playlist by"),
+    outputs="text",
+    title="Playlist Vibe Builder",
+)
+
+interface.launch()
