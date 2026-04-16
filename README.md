@@ -15,16 +15,16 @@ In this project, Merge Sort helps demonstrate how playlists can be automatically
 
 The dataset used in this project is a list of songs where each song contains:
 
-title
-artist
-energy score (0–100)
-duration (seconds)
+- title
+- artist
+- energy score (0–100)
+- duration (seconds)
 
 Assumptions made:
 
-Energy scores are numerical values between 0 and 100.
-Duration is measured in seconds.
-Each song contains valid data for both sorting attributes.
+- Energy scores are numerical values between 0 and 100.
+- Duration is measured in seconds.
+- Each song contains valid data for both sorting attributes.
 
 These assumptions ensure the sorting algorithm can compare numerical values correctly.
 
