@@ -36,7 +36,57 @@ Output → Sorted playlist is displayed
 **Steps to Run:**
 1. install dependencies: open command prompt and type "pip install gradio"
 2. run the app: then type "python app.py"
-3. open the local link shown in terminal: (ex. http://127.0.0.1:7860/) 
+3. open the local link shown in terminal: (ex. http://127.0.0.1:7860/)
+
+**Testing & Verification** 
+
+Test Case 1 — Sort by Energy
+
+Input: Playlist of songs with different energy values.
+Action: User selects energy as the sorting key.
+
+Expected Result:
+Songs appear in ascending order based on energy score.
+
+Actual Result:
+The songs were correctly ordered from lowest energy to highest energy.
+
+Test Case 2 — Sort by Duration
+
+Input: Same playlist dataset.
+Action: User selects duration as the sorting key.
+
+Expected Result:
+Songs appear in ascending order based on duration.
+
+Actual Result:
+Songs were correctly sorted by duration from shortest to longest.
+
+Test Case 3 — Small Dataset Edge Case
+
+Input: Playlist containing only one song.
+
+Expected Result:
+The algorithm returns the same song without errors.
+
+Actual Result:
+The algorithm handled the case correctly.
+
+Test Case 4 — Already Sorted List
+
+Input: Playlist already sorted by energy.
+
+Expected Result:
+The playlist remains correctly ordered.
+
+Actual Result:
+Merge Sort returned the same correct ordering.
+
+Verification Method
+
+The algorithm result was manually checked to ensure that the songs were ordered correctly based on the selected key.
+
+Screenshots of successful runs are included in the repository.
 
 **Hugging Face Link**: https://huggingface.co/spaces/oliviaaaaaaaamd/sorting-project 
 
