@@ -1,6 +1,44 @@
 # sorting-project
 **Algorithm name:** Merge Sort
 
+**Why merge sort fits this problem:** 
+
+Merge Sort is well suited for this playlist sorting problem because it efficiently handles lists of data such as songs with attributes like energy and duration.
+
+Merge Sort divides the dataset into smaller sublists, sorts those sublists, and then merges them back together in the correct order. This approach makes the algorithm efficient and reliable for sorting structured data.
+
+The time complexity of Merge Sort is O(n log n), which ensures consistent performance even as the number of songs increases.
+
+In this project, Merge Sort helps demonstrate how playlists can be automatically organized based on a chosen attribute.
+
+**Dataset & Assumptions:**
+
+The dataset used in this project is a list of songs where each song contains:
+
+title
+artist
+energy score (0–100)
+duration (seconds)
+
+Assumptions made:
+
+Energy scores are numerical values between 0 and 100.
+Duration is measured in seconds.
+Each song contains valid data for both sorting attributes.
+
+These assumptions ensure the sorting algorithm can compare numerical values correctly.
+
+**Preconditions:** 
+
+For the Merge Sort algorithm to work correctly, the dataset must contain valid numerical values for the selected sorting key.
+
+The application assumes that:
+
+Each song entry contains the required fields.
+The selected sorting key (energy or duration) exists for each song.
+
+Since the dataset is predefined within the program, the data is guaranteed to meet these conditions. This ensures the algorithm runs without errors.
+
 **Images:**
 
 <img width="539" height="670" alt="Screenshot 2026-04-15 143842" src="https://github.com/user-attachments/assets/0939cfca-84d7-4c30-a315-4ed04ff8aaf6" />
